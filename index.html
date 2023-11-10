@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辰慕霆</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="./js/flexible.js"></script>
+</head>
+<body>
+    <header>
+        <h1>数据大屏-Echarts</h1>
+        <div class="showTime"></div>
+    </header>
+    <div class="mainbox">
+        <div class="box1">
+            <div class="panel bar">
+                <h2>柱状图-就业行业</h2>
+                <div class="chart">
+                    <!-- <script src="./js/index.js"></script> -->
+                </div>
+
+                <div class="jiao1"></div>
+                <div class="jiao2"></div>
+                <div class="jiao3"></div>
+                <div class="jiao4"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图-人员变化 2020 2021</h2>
+                <div class="chart"></div>
+                
+                <div class="jiao1"></div>
+                <div class="jiao2"></div>
+                <div class="jiao3"></div>
+                <div class="jiao4"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼形图-年龄分布</h2>
+                <div class="chart"></div>
+                
+                <div class="jiao1"></div>
+                <div class="jiao2"></div>
+                <div class="jiao3"></div>
+                <div class="jiao4"></div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="no">
+                <div class="no-head">
+                    <!-- 头部数字部分 -->
+                    <ul>
+                        <li>12344
+                            <div class="shuxian"></div>
+                        </li>
+                        <li>3232</li>
+                        <div class="jiao1"></div>
+                        <div class="jiao2"></div>
+                    </ul>
+                    
+                </div>
+                <div class="no-body">
+                    <!-- 头部文字部分 -->
+                    <ul>
+                        <li>前端需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart">地图展示</div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="panel bar">
+                <h2>柱形图-就业行业</h2>
+                <div class="chart"></div>
+
+                <div class="jiao1"></div>
+                <div class="jiao2"></div>
+                <div class="jiao3"></div>
+                <div class="jiao4"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图-播放量</h2>
+                <div class="chart"></div>
+                
+                <div class="jiao1"></div>
+                <div class="jiao2"></div>
+                <div class="jiao3"></div>
+                <div class="jiao4"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼形图-地区分布</h2>
+                <div class="chart"></div>
+                
+                <div class="jiao1"></div>
+                <div class="jiao2"></div>
+                <div class="jiao3"></div>
+                <div class="jiao4"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000);//開始运行
+        function time() {
+            clearTimeout(t);//清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours();//获取时
+            var m = dt.getMinutes();//获取分
+            var s = dt.getSeconds();//获取秒
+            document.querySelector(".showTime").innerHTML = '当前时间：' + y + "年" + mt + "月" + day + "-" + h + "时" + m + "分" + s + "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行     
+        }
+    </script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
