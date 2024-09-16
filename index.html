@@ -2,129 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>辰慕霆</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="favicon.ico">
-    <script src="./js/flexible.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>自适应</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
-    <header>
-        <h1>数据大屏-Echarts</h1>
-        <div class="showTime"></div>
+    <!--   头部    -->
+    <header class="header">
+        <div class="header-title">
+            <p class="title">辰慕霆</p>
+        </div>
     </header>
-    <div class="mainbox">
-        <div class="box1">
-            <div class="panel bar">
-                <h2>柱状图-就业行业</h2>
-                <div class="chart">
-                    <!-- <script src="./js/index.js"></script> -->
-                </div>
-
-                <div class="jiao1"></div>
-                <div class="jiao2"></div>
-                <div class="jiao3"></div>
-                <div class="jiao4"></div>
+    <!--  内容  -->
+    <div class="content">
+        <!--   信息     -->
+        <div class="info-box">
+            <div class="content-info">
+                <p class="info-title">我的信息</p>
             </div>
-            <div class="panel line">
-                <h2>折线图-人员变化 2020 2021</h2>
-                <div class="chart"></div>
-                
-                <div class="jiao1"></div>
-                <div class="jiao2"></div>
-                <div class="jiao3"></div>
-                <div class="jiao4"></div>
-            </div>
-            <div class="panel pie">
-                <h2>饼形图-年龄分布</h2>
-                <div class="chart"></div>
-                
-                <div class="jiao1"></div>
-                <div class="jiao2"></div>
-                <div class="jiao3"></div>
-                <div class="jiao4"></div>
+            <div class="info-content clearfix">
+                <p class="name leftfix">昵称: <span>辰慕霆</span></p>
+                <p class="wechat leftfix">微信: <span>xxxxxxxxx</span></p>
+                <p class="email leftfix">邮箱: <span>xxxxxxxxx</span></p>
+                <p class="phone leftfix">手机号: <span>xxxxxxxxx</span></p>
+                <p class="address leftfix">地址: <span>xxxxxxxxx</span></p>
+                <p class="introduction leftfix">个人介绍: <span>有志者事竟成</span></p>
             </div>
         </div>
-        <div class="box2">
-            <div class="no">
-                <div class="no-head">
-                    <!-- 头部数字部分 -->
-                    <ul>
-                        <li>12344
-                            <div class="shuxian"></div>
-                        </li>
-                        <li>3232</li>
-                        <div class="jiao1"></div>
-                        <div class="jiao2"></div>
-                    </ul>
-                    
-                </div>
-                <div class="no-body">
-                    <!-- 头部文字部分 -->
-                    <ul>
-                        <li>前端需求人数</li>
-                        <li>市场供应人数</li>
-                    </ul>
-                </div>
+        <!--   推荐项目     -->
+        <div class="project-box">
+            <div class="project-name">
+                <p class="project-title">推荐项目</p>
             </div>
-            <div class="map">
-                <div class="map1"></div>
-                <div class="map2"></div>
-                <div class="map3"></div>
-                <div class="chart">地图展示</div>
-            </div>
-        </div>
-        <div class="box3">
-            <div class="panel bar">
-                <h2>柱形图-就业行业</h2>
-                <div class="chart"></div>
-
-                <div class="jiao1"></div>
-                <div class="jiao2"></div>
-                <div class="jiao3"></div>
-                <div class="jiao4"></div>
-            </div>
-            <div class="panel line">
-                <h2>折线图-播放量</h2>
-                <div class="chart"></div>
-                
-                <div class="jiao1"></div>
-                <div class="jiao2"></div>
-                <div class="jiao3"></div>
-                <div class="jiao4"></div>
-            </div>
-            <div class="panel pie">
-                <h2>饼形图-地区分布</h2>
-                <div class="chart"></div>
-                
-                <div class="jiao1"></div>
-                <div class="jiao2"></div>
-                <div class="jiao3"></div>
-                <div class="jiao4"></div>
+            <div class="project-content clearfix">
+                <button class="leftfix"><a link="https://gedoor.github.io/" target="_blank">开源阅读：安卓手机阅读神器</a></button>
+                <button class="leftfix"><a link="https://github.com/cgbsmy/TrayS/releases" target="_blank">Trays：win10任务栏工具</a></button>
             </div>
         </div>
     </div>
-
-
-
-    <script>
-        var t = null;
-        t = setTimeout(time, 1000);//開始运行
-        function time() {
-            clearTimeout(t);//清除定时器
-            dt = new Date();
-            var y = dt.getFullYear();
-            var mt = dt.getMonth() + 1;
-            var day = dt.getDate();
-            var h = dt.getHours();//获取时
-            var m = dt.getMinutes();//获取分
-            var s = dt.getSeconds();//获取秒
-            document.querySelector(".showTime").innerHTML = '当前时间：' + y + "年" + mt + "月" + day + "日-" + h + "时" + m + "分" + s + "秒";
-            t = setTimeout(time, 1000); //设定定时器，循环运行     
-        }
-    </script>
-    <script src="./js/echarts.min.js"></script>
-    <script src="./js/china.js"></script>
-    <script src="./js/index.js"></script>
+    <!--  尾部  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Copyright © 2024 辰慕霆</p>
+        </div>
+    </footer>
 </body>
 </html>
